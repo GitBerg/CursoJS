@@ -29,6 +29,7 @@ function verificar(){
                 img.setAttribute('src', 'm_old.jpg')
                 //idoso
             }
+            res.innerHTML = `Detectamos um ${genero} com ${idade} ano(s).`
         } else if(fsex[1].checked){
             genero = 'mulher'  
             if(idade >= 0  && idade < 10){
@@ -44,8 +45,9 @@ function verificar(){
                 img.setAttribute('src', 'g_old.jpg')
                 //idoso
             }
+            res.innerHTML = `Detectamos uma ${genero} com ${idade} ano(s).`
         }
-        res.innerHTML = `Detectamos uma ${genero} com ${idade} anos.`
+        
         res.style.textAlign = 'center'
         res.appendChild(img)
     }

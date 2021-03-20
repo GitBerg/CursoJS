@@ -4,17 +4,17 @@ function contarPassos(){
     var passos = document.getElementById('qntpass').value
     var res = document.querySelector('div#res')
     
-     if(fim == 0){
-        window.alert('Fim nao pode ser 0, colocaremos 1')
-        fim = 1
-    }
+    if(inicio.length == 0 || fim.length == 0 || passos.length == 0){
+        window.alert('Nenhum campo pode estar vazio')
+    }else{
+
     if(passos == 0){
         window.alert('Passos nao pode ser 0, colocaremos 1')
         passos = 1
     }
 
     if(inicio <= 0){
-        res.innerHTML = '<p>Impossivel iniciar com 0'
+        res.innerHTML = '<p>Impossivel iniciar com 0 ou numeros negativos'
     }
     else if(Number(passos) > Number(fim)){
         window.alert('Passos não pode ter valor maior que fim.')
@@ -32,5 +32,6 @@ function contarPassos(){
 } 
    
     res.innerHTML += `🏁`
+}
 }
 }

@@ -12,7 +12,10 @@ if(n <= 0 || n > 100 || valores.indexOf(n) != -1){
     item.text = `Valor ${n} adicionado`
     sel.appendChild(item)
     valores.push(n)
+    res.innerHTML = ''
 }
+num.value = ''
+num.focus()
 }
 function analisar(){
     if(valores.length == 0){
